@@ -3,6 +3,10 @@
     box-shadow: -1px 4px 20px 1px #f1f1f185;
 }
 
+.left-menu.hide {
+    width: 0;
+}
+
 header.header {
     justify-content: space-between;
     align-items: center;
@@ -74,11 +78,10 @@ p.count {
 
 /* ========================dropdown manu create========== */
 
-
 .dropdown-menu {
     z-index: var(--z-fixed);
     max-width: 15rem;
-    right: -21px !important;
+    right: 0 !important;
     left: auto !important;
     min-width: 16rem;
     padding: 0;
@@ -104,10 +107,10 @@ img.user-note {
     color: var(--second-color);
     width: 100%;
     white-space: initial;
-    line-height: 13px;
+    line-height: 18px;
     border-bottom: 1px solid #f7f7f7;
     align-items: center;
-    padding: 10px;
+    padding: 15px;
 }
 
 .message-item {
@@ -136,6 +139,15 @@ img.user-note {
     color: var(--white-color);
 }
 
+p.status-link span {
+    color: #fff !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 !important;
+}
+
 p.note-name {
     font-size: 13px;
     font-weight: 500;
@@ -151,7 +163,6 @@ p.note-time {
 
 
 /* =============================Message dropdown style============ */
-
 
 img.sms-user {
     width: 45px;
@@ -169,4 +180,115 @@ p.m-user-name {
 p.user-role {
     font-size: 12px;
     color: var(--main-color);
+}
+
+
+/* ===========================profile style============= */
+
+.media {
+    background: var(--main-color);
+    text-align: center;
+    padding-top: 10px;
+}
+
+img.img-fluid.mr-2 {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.media-body {
+    margin-top: 10px;
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+
+.media-body h5 {
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.media-body p {
+    font-size: 13px;
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+a.dropdown-item a span {
+    color: var(--main-color);
+}
+
+.dp-main-menu a span {
+    color: var(--main-color);
+    padding-right: 8px;
+}
+
+
+/* =============SIDEBAR START STYLE=========== */
+
+.left-menu {
+    height: 100vh;
+    width: 240px;
+    position: fixed;
+    box-shadow: 3px -1px 19px 1px #efeeee;
+    overflow-y: scroll;
+    transition: .5s;
+    margin-top: -15px;
+    background: var(--white-color);
+}
+
+nav.animated {
+    position: relative;
+    /* width: 240px; */
+}
+
+.left-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.left-menu::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: linear-gradient(0deg, rgba(180, 58, 112, 1) 0%, rgb(232, 37, 170) 54%);
+}
+
+ul#sidebar {
+    margin: 0;
+    padding: 0;
+}
+
+ul#sidebar li {
+    transition: .3s;
+    border-left: 5px solid #fff;
+}
+
+ul#sidebar li a {
+    display: block;
+    padding: 7px 15px;
+    transition: .2s;
+    font-size: 12px;
+    font-weight: 500;
+    color: #636262;
+}
+
+ul#sidebar li a:hover {
+    color: var(--main-color);
+    background: #f7f7f7;
+}
+
+ul#sidebar li:hover {
+    border-left: 5px solid var(--main-color);
+}
+
+li.active {
+    border-left: 5px solid var(--main-color) !important;
+}
+
+li.active a {
+    color: var(--main-color) !important;
+    background: #f9f9f9;
+}
+
+ul#sidebar li a i {
+    padding-right: 7px;
+    font-size: 14px;
 }
