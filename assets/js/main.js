@@ -18,3 +18,6 @@ $(document).ready(function() {
         $(".content-wrapper").toggleClass("hide");
     });
 });
+$(document).ready( function () {
+    $('#order-table').DataTable();
+} );
